@@ -12,6 +12,7 @@ set ruler
 set ai
 set si
 set ts=2
+set autowrite
 
 :hi CursorLine cterm=NONE ctermbg=black ctermfg=white guibg=darkmagenta guifg=white
 
@@ -26,8 +27,21 @@ map <F4> :set hls<CR>/\s\+$<CR>
 map! <F4> <ESC><F4>i"
 
 " Highlight on/off
-map <F7> :set hls!<CR><Bar>:echo "HLSearch: " . strpart("OffOn", 3 * &hlsearch, 3)<CR>
-map! <F7> <ESC><F7>i"
+map <F3> :set hls!<CR><Bar>:echo "HLSearch: " . strpart("OffOn", 3 * &hlsearch, 3)<CR>
+map! <F3> <ESC><F3>i"
+
+" GO LANG configuration
+:map <C-F5> :GoRun %<CR>
+:map <F6> :GoBuild<CR>
+setlocal omnifunc=go#complete#Complete
+:map <F8> :cnext<CR>
+:map <F9> :cprevious<CR>
+:map <C-h> :GoDoc<CR>
+nnoremap <leader>s :cclose<CR>
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+let g:go_fmt_command = "goimports"
+
 
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
