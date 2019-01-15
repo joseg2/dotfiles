@@ -49,6 +49,7 @@ inoremap <C-j>       <Down>
 let g:ragtag_global_maps = 1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " first, enable status line always
 set laststatus=2
