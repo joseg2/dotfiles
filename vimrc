@@ -1,6 +1,6 @@
 
 
-source ~/newdotfiles/bundles.vim
+source ~/.vim/bundles.vim
 
 syntax on
 set expandtab
