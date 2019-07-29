@@ -40,6 +40,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
+Plugin 'andrewstuart/vim-kubernetes'
 Plugin 'Windows-PowerShell-Syntax-Plugin'
 
 

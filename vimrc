@@ -3,7 +3,7 @@
 source ~/newdotfiles/bundles.vim
 
 syntax on
-set expandtab
+set rtp+=/usr/local/opt/fzf
 set hlsearch
 set incsearch
 set number
@@ -11,8 +11,11 @@ set cursorline
 set ruler
 set ai
 set si
-set ts=2
 set autowrite
+set tabstop=2     " (ts) width (in spaces) that a <tab> is displayed as
+set expandtab     " (et) expand tabs to spaces (use :retab to redo entire file)
+set shiftwidth=2  " (sw) width (in spaces) used in each step of autoindent (aswell as << and >>)
+set ignorecase
 
 :hi CursorLine cterm=NONE ctermbg=black ctermfg=white guibg=darkmagenta guifg=white
 
