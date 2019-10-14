@@ -39,7 +39,6 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
-Plugin 'Windows-PowerShell-Syntax-Plugin'
 
 
 " All of your Plugins must be added before the following line
