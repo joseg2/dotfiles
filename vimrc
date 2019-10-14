@@ -1,9 +1,8 @@
 
 
-source ~/.vim/bundles.vim
+source ~/dotfiles/bundles.vim
 
 syntax on
-set expandtab
 set hlsearch
 set incsearch
 set number
@@ -11,8 +10,12 @@ set cursorline
 set ruler
 set ai
 set si
-set ts=2
 set autowrite
+set tabstop=2     " (ts) width (in spaces) that a <tab> is displayed as
+set expandtab     " (et) expand tabs to spaces (use :retab to redo entire file)
+set shiftwidth=2  " (sw) width (in spaces) used in each step of autoindent (aswell as << and >>)
+set ignorecase
+
 
 :hi CursorLine cterm=NONE ctermbg=black ctermfg=white guibg=darkmagenta guifg=white
 
@@ -49,6 +52,12 @@ inoremap <C-j>       <Down>
 let g:ragtag_global_maps = 1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_python_checkers = ['mypy', 'pyflakes']
+let g:syntastic_enable_signs = 1
+
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
 
 " first, enable status line always
 set laststatus=2
