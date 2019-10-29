@@ -1,6 +1,6 @@
 
 
-source ~/newdotfiles/bundles.vim
+source ~/dotfiles/bundles.vim
 
 syntax on
 set rtp+=/usr/local/opt/fzf
