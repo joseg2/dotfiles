@@ -50,8 +50,12 @@ inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
 
 let g:ragtag_global_maps = 1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_python_checkers = ['mypy', 'pyflakes']
+" let g:syntastic_python_checker_args='--ignore=E501,E302,E231,E261,E201,W402,W293'
+let g:syntastic_enable_signs = 1
+
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " first, enable status line always
