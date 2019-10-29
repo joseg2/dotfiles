@@ -51,8 +51,8 @@ inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
 
 let g:ragtag_global_maps = 1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_yaml_checkers = ['yamllint']
 let g:syntastic_python_checkers = ['mypy', 'pyflakes']
