@@ -2,7 +2,6 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/bundle/powerline-2.6/powerline/bindings/vim
 call vundle#begin()
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'VundleVim/Vundle.vim'
