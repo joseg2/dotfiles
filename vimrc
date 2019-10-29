@@ -17,6 +17,7 @@ set expandtab     " (et) expand tabs to spaces (use :retab to redo entire file)
 set shiftwidth=2  " (sw) width (in spaces) used in each step of autoindent (aswell as << and >>)
 set ignorecase
 
+
 :hi CursorLine cterm=NONE ctermbg=black ctermfg=white guibg=darkmagenta guifg=white
 
 " Mappings
@@ -57,6 +58,7 @@ let g:syntastic_python_checkers = ['mypy', 'pyflakes']
 let g:syntastic_enable_signs = 1
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
+
 
 " first, enable status line always
 set laststatus=2
