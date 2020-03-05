@@ -55,6 +55,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_yaml_yamllint_args = "-c ~/dotfiles/yamllint.yaml"
 let g:syntastic_python_checkers = ['mypy', 'pyflakes']
 let g:syntastic_enable_signs = 1
 
