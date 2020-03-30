@@ -17,6 +17,10 @@ set expandtab     " (et) expand tabs to spaces (use :retab to redo entire file)
 set shiftwidth=2  " (sw) width (in spaces) used in each step of autoindent (aswell as << and >>)
 set ignorecase
 
+" Colour scheme for dark background
+set background=dark
+set t_Co=256
+
 
 :hi CursorLine cterm=NONE ctermbg=black ctermfg=white guibg=darkmagenta guifg=white
 
@@ -26,7 +30,7 @@ set ignorecase
 map <F2> :set number!<CR>
 map! <F2> <ESC><F2> i
 
-" Make trailing space visible  
+" Make trailing space visible
 map <F4> :set hls<CR>/\s\+$<CR>
 map! <F4> <ESC><F4>i"
 
@@ -50,6 +54,10 @@ let g:go_fmt_command = "goimports"
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
 
+let g:airline_theme='wombat'
+" let g:airline_theme='dark_minimal'
+" let g:airline_theme='solarized'
+" let g:airline_solarized_bg='dark'
 let g:ragtag_global_maps = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
@@ -59,7 +67,7 @@ let g:syntastic_yaml_yamllint_args = "-c ~/dotfiles/yamllint.yaml"
 let g:syntastic_python_checkers = ['mypy', 'pyflakes']
 let g:syntastic_enable_signs = 1
 
-let g:NERDTreeNodeDelimiter = "\u00a0"
+" let g:NERDTreeNodeDelimiter = "\u00a0"
 
 
 " first, enable status line always
@@ -104,10 +112,10 @@ endfunction
 
 
 function! InitializeDirectories()
-    let separator = "." 
+    let separator = "."
     let parent = $HOME
     let prefix = '.vim'
-    let dir_list = { 
+    let dir_list = {
                 \ 'backup': 'backupdir',
                 \ 'views': 'viewdir',
                 \ 'swap': 'directory' }
@@ -117,7 +125,7 @@ function! InitializeDirectories()
     endif
 
     for [dirname, settingname] in items(dir_list)
-        let directory = parent . '/' . prefix . dirname . "/" 
+        let directory = parent . '/' . prefix . dirname . "/"
         if exists("*mkdir")
             if !isdirectory(directory)
                 call mkdir(directory)
