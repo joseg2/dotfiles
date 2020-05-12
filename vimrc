@@ -50,6 +50,14 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 let g:go_fmt_command = "goimports"
 
+" TERRAFORM configuration
+"  Allow vim-terraform to align settings automatically with Tabularize.
+let g:terraform_align=1
+"  Allow vim-terraform to automatically fold (hide until unfolded) sections of terraform code. Defaults to 0 which is off.
+let g:terraform_fold_sections=0
+"  Allow vim-terraform to automatically format *.tf and *.tfvars files with terraform fmt. You can also do this manually with the :TerraformFmt command.
+let g:terraform_fmt_on_save=1
+
 
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
@@ -63,54 +71,17 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_yaml_checkers = ['yamllint']
-let g:syntastic_yaml_yamllint_args = "-c ~/dotfiles/yamllint.yaml"
+let g:syntastic_yaml_yamllint_args = "-c ~/dotfiles/yamllint"
 let g:syntastic_python_checkers = ['mypy', 'pyflakes']
 let g:syntastic_enable_signs = 1
 
 " let g:NERDTreeNodeDelimiter = "\u00a0"
 
-
-" first, enable status line always
 set laststatus=2
 set noshowmode
 set encoding=utf-8
-"
-" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-" set statusline+=%<                              " cut at start
-" set statusline+=%2*[%n%H%M%R%W]%*               " buffer number, and flags
-" set statusline+=%-40f                           " relative path
-" set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
-" set statusline+=%{&ff}]                         " file format
-" set statusline+=[Filetype=%Y]                   " file type
-" set statusline+=\ %{fugitive#statusline()}      " git branch
-" "display a warning if &paste is set
-" set statusline+=%#error#
-" set statusline+=%{&paste?'[paste]':''}
-" set statusline+=%*
-" " set statusline+=%1*%y%*%*                           " file type
-" set statusline+=%=                                    " seperate between right- and left-aligned
-" set statusline+=%#warningmsg#                         " Syntastic
-" set statusline+=%{SyntasticStatuslineFlag()}          " Syntastic
-" set statusline+=%*                                    " Syntastic
-" set statusline+=%{StatuslineCurrentHighlight()}\ \    " current highlight
-" set statusline+=%c,                                   " cursor column
-" set statusline+=%1((%l/%L)%)                          " line and total lines
-" set statusline+=%P                                    " percentage of file
-"return the syntax highlight group under the cursor ''
-function! StatuslineCurrentHighlight()
-    let name = synIDattr(synID(line('.'),col('.'),1),'name')
-    if name == ''
-        return ''
-    else
-        return '[' . name . ']'
-    endif
-endfunction
-
-
-
-
-
+" Keep vim temp files in $HOME/.vim
 function! InitializeDirectories()
     let separator = "."
     let parent = $HOME
