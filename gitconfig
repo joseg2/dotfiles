@@ -1,0 +1,17 @@
+[push]
+	default = simple
+[format]
+	pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[alias]
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+#	autocrlf = true
+#	Uncomment below to use meld
+#[diff]
+#  tool = meld
+#[difftool]
+#  prompt = false
+#[difftool "meld"]
+#  cmd = meld "$LOCAL" "$REMOTE"
+
