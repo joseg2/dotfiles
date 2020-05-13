@@ -7,13 +7,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
-Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ludovicchabant/vim-lawrencium'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'garbas/vim-snipmate'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/AutoClose'
 Plugin 'fatih/vim-go'
@@ -37,9 +35,9 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'andrewstuart/vim-kubernetes'
+Plugin 'junegunn/fzf'
 
 
 " All of your Plugins must be added before the following line
