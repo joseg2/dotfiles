@@ -6,6 +6,7 @@ call vundle#begin()
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}

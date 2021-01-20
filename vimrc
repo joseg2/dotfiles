@@ -20,6 +20,9 @@ set laststatus=2
 set noshowmode
 set encoding=utf-8
 set t_Co=256
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+set listchars=eol:⏎,tab:▸·,trail:␠,nbsp:⎵
+
 
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
@@ -77,8 +80,11 @@ setlocal omnifunc=go#complete#Complete
 :map <F9> :cprevious<CR>
 :map <C-h> :GoDoc<CR>
 nnoremap <leader>s :cclose<CR>
-autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
-autocmd FileType go nmap <Leader>i <Plug>(go-info)
+if has("autocmd")
+  autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+  autocmd FileType go nmap <Leader>i <Plug>(go-info)
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+endif
 
 " FZF configuration
 :map <F10> :FZF<CR>
@@ -87,6 +93,9 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-i': 'split',
   \ 'ctrl-s': 'vsplit' }
+
+" Fugitive-gitlab
+let g:fugitive_gitlab_domains = ['https://cd.splunkdev.com']
 
 " Tabular mappings
 let mapleader=','
